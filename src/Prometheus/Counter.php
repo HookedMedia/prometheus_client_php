@@ -5,6 +5,10 @@ namespace Prometheus;
 
 use Prometheus\Storage\Adapter;
 
+/**
+ * This is the counter class!
+ * It's probably important!
+ */
 class Counter extends Collector
 {
     const TYPE = 'counter';

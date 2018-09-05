@@ -6,6 +6,9 @@ Prometheus\\Counter
 
 .. php:class:: Counter
 
+    This is the counter class!
+    It's probably important!
+
     .. php:attr:: storageAdapter
 
         protected
