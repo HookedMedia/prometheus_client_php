@@ -1,67 +1,47 @@
--------------------
-Prometheus\\Counter
--------------------
+Counter
+=======
 
-.. php:namespace: Prometheus
+:Qualified name: ``Prometheus\Counter``
+:Extends: :class:`Collector`
 
 .. php:class:: Counter
 
-    This is the counter class!
-    It's probably important!
+  .. php:method:: __construct (Adapter $storageAdapter, $namespace, $name, $help[, $labels])
 
-    .. php:attr:: storageAdapter
+    :param Adapter $storageAdapter:
+    :param string $namespace:
+    :param string $name:
+    :param string $help:
+    :param array $labels:
+      Default: ``array()``
 
-        protected
+  .. php:method:: getHelp ()
 
-    .. php:attr:: name
 
-        protected
+  .. php:method:: getKey ()
 
-    .. php:attr:: help
 
-        protected
+  .. php:method:: getLabelNames ()
 
-    .. php:attr:: labels
 
-        protected
+  .. php:method:: getName ()
 
-    .. php:method:: getType()
 
-        :returns: string
+  .. php:method:: getType () -> string
 
-    .. php:method:: inc($labels = array())
+    :returns: string -- 
 
-        :type $labels: array
-        :param $labels: e.g. ['status', 'opcode']
+  .. php:method:: inc ([])
 
-    .. php:method:: incBy($count, $labels = array())
+    :param array $labels:
+      e.g. ['status', 'opcode'].
+      Default: ``array()``
 
-        :type $count: int
-        :param $count: e.g. 2
-        :type $labels: array
-        :param $labels: e.g. ['status', 'opcode']
+  .. php:method:: incBy ($count[, array $labels])
 
-    .. php:method:: __construct(Adapter $storageAdapter, $namespace, $name, $help, $labels = array())
+    :param int $count:
+      e.g. 2
+    :param array $labels:
+      e.g. ['status', 'opcode'].
+      Default: ``array()``
 
-        :type $storageAdapter: Adapter
-        :param $storageAdapter:
-        :type $namespace: string
-        :param $namespace:
-        :type $name: string
-        :param $name:
-        :type $help: string
-        :param $help:
-        :type $labels: array
-        :param $labels:
-
-    .. php:method:: getName()
-
-    .. php:method:: getLabelNames()
-
-    .. php:method:: getHelp()
-
-    .. php:method:: getKey()
-
-    .. php:method:: assertLabelsAreDefinedCorrectly($labels)
-
-        :param $labels:
